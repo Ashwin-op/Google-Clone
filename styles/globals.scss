@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+:root {
+  --b1: #3fc5fa;
+  --b2: #4f86db;
+  --b3: #215fbb;
+  --y1: #fae931;
+  --y2: #fabd04;
+  --g1: #4df97d;
+  --g2: #36af56;
+  --r1: #e9903c;
+  --r2: #e94234;
+  --bk1: #1a1a1a;
+  --bk2: #2c2c2c;
+  --bk3: #606060;
+  --gr1: #cdcdcd;
+  --gr2: #efefef;
+  --gr3: #fafafa;
+  --white: #fff;
+  --maxWidth: 720px;
+}
+
+.app.dark {
+  --b1: #3fc5fa;
+  --b2: #4f86db;
+  --b3: #215fbb;
+  --y1: #fae931;
+  --y2: #fabd04;
+  --g1: #4df97d;
+  --g2: #36af56;
+  --r1: #e9903c;
+  --r2: #e94234;
+  --bk1: #efecff;
+  --bk2: #cac0fd;
+  --bk3: #8c6bba;
+  --gr1: #7a5fa4;
+  --gr2: #281f35;
+  --gr3: #2d233c;
+  --gr4: #271350;
+  --white: #381967;
+}
+
+*,
+*::before,
+*::after,
+*::placeholder {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+svg {
+  transition: fill -0.2s;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Titillium Web', sans-serif;
+  background: var(--gr3);
+  color: var(--bk1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &.dark .suggestion ul::-webkit-scrollbar-thumb {
+    border: solid 0.3rem var(--gr4);
+    background: var(--white);
+  }
+
+  &.dark ::-webkit-scrollbar-thumb {
+    background: var(--gr4);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.9rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border: solid 0.3rem var(--white);
+  background: var(--gr2);
+  border-radius: 0.5rem;
+
+  &:hover {
+    background: var(--gr1);
+  }
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: var(--b2);
+
+  &:hover {
+    color: var(--b3);
+  }
+}
