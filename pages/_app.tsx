@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../styles/Header.css';
 import '../styles/Main.css';
+import '../styles/Sidebar.css';
 import '../styles/globals.css';
 
 import NProgress from 'nprogress';

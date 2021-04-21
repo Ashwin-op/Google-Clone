@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React, { useRef } from 'react';
 import { useRouter } from 'next/router';
 import { MenuAlt1Icon, MoonIcon, SearchIcon, SparklesIcon, SunIcon, UserCircleIcon } from '@heroicons/react/outline';
-
+import Sidebar from '../components/Sidebar';
 
 export default function Home() {
   const router = useRouter();
@@ -42,7 +42,7 @@ export default function Home() {
       </Head>
 
       <header>
-        {/*<Sidebar ref={sidebarRef}/>*/}
+        <Sidebar ref={sidebarRef}/>
         <span>
           <button className="sidebarToggle icon" onClick={openSidebar}>
             <MenuAlt1Icon/>

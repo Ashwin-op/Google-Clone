@@ -1,0 +1,96 @@
+.sidebar {
+    position: fixed;
+    background: var(--white);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s 0.1s;
+}
+
+.sidebar ul {
+    width: fit-content;
+    height: 100vh;
+    list-style-type: none;
+    background: var(--white);
+    overflow: auto;
+    padding-bottom: 2rem;
+    box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.05);
+    transform: translateX(-100%);
+    transition: all 0.2s;
+}
+
+.sidebar ul li {
+    display: flex;
+    color: var(--bk3);
+    align-items: center;
+    padding: 0.75rem 3rem 0.75rem 1.5rem;
+    margin: 0;
+}
+
+.sidebar ul li:not(.ilogo):hover {
+    background: var(--gr3);
+    color: var(--bk2);
+    background: var(--gr2);
+}
+
+.sidebar ul li:not(.ilogo):hover svg {
+    color: var(--bk2);
+}
+
+.sidebar ul li svg {
+    width: 1.5rem;
+    margin-right: 1rem;
+    color: var(--bk3);
+    opacity: 0.75;
+}
+
+.sidebar .ilogo img {
+    height: 1.5rem;
+    margin: 1rem 0;
+    width: auto;
+}
+
+.sidebar hr {
+    border: none;
+    height: 1px;
+    background: var(--gr2);
+    margin: 1rem 0;
+}
+
+.sidebar li.ilogo {
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.sidebar.open {
+    backdrop-filter: blur(8px) saturate(85%);
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.2s;
+}
+
+.sidebar.open ul {
+    transform: translateX(0);
+    transition: all 0.2s 0.1s;
+}
+
+.app.dark .sidebar hr {
+    background: var(--gr4);
+}
+
+.app.dark .sidebar ul li {
+    color: var(--bk2);
+}
+
+.ilogo svg {
+    margin: 0 !important;
+    width: 1.33rem !important;
+}
+
+/*# sourceMappingURL=Sidebar.css.map */
