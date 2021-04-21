@@ -34,7 +34,7 @@ header {
 
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         width: 100%;
         height: 2px;
         border-radius: 4px;
@@ -64,7 +64,7 @@ header {
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 99px;
@@ -114,7 +114,7 @@ button.icon {
 
   &::after {
     position: absolute;
-    content: "Switch Theme";
+    content: 'Switch Theme';
     font-size: 0.8rem;
     white-space: nowrap;
     right: calc(100% + 0.75rem);

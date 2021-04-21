@@ -1,9 +1,16 @@
+import {
+  MenuAlt1Icon,
+  MoonIcon,
+  SearchIcon,
+  SparklesIcon,
+  SunIcon,
+  UserCircleIcon
+} from '@heroicons/react/outline';
 import Head from 'next/head';
-import React, { useRef } from 'react';
 import { useRouter } from 'next/router';
-import { MenuAlt1Icon, MoonIcon, SearchIcon, SparklesIcon, SunIcon, UserCircleIcon } from '@heroicons/react/outline';
-import Sidebar from '../components/Sidebar';
+import React, { useRef } from 'react';
 import Apps from '../components/Apps';
+import Sidebar from '../components/Sidebar';
 
 export default function Home() {
   const router = useRouter();
@@ -38,15 +45,17 @@ export default function Home() {
     <div className="app" ref={appDiv}>
       <Head>
         <title>Google-ish</title>
-        <link rel="icon"
-              href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/160px-Google_%22G%22_Logo.svg.png"/>
+        <link
+          rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/160px-Google_%22G%22_Logo.svg.png"
+        />
       </Head>
 
       <header>
-        <Sidebar ref={sidebarRef}/>
+        <Sidebar ref={sidebarRef} />
         <span>
           <button className="sidebarToggle icon" onClick={openSidebar}>
-            <MenuAlt1Icon/>
+            <MenuAlt1Icon />
           </button>
           <ul className="nav">
             <li>Images</li>
@@ -57,12 +66,12 @@ export default function Home() {
         </span>
         <span>
           <div className="themeToggle icon" ref={toggleSwitch} onClick={toggleTheme}>
-            <SunIcon className="sun"/>
-            <MoonIcon className="moon"/>
+            <SunIcon className="sun" />
+            <MoonIcon className="moon" />
           </div>
-          <Apps/>
+          <Apps />
           <div className="user">
-            <UserCircleIcon/>
+            <UserCircleIcon />
             <span className="uid">
               <span className="top">My Account</span>
             </span>
@@ -72,22 +81,26 @@ export default function Home() {
 
       <main>
         <div className="logo">
-          <img src="/google.png" alt="google logo"/>
-          <img className="shadow" src="/google.png" alt="google logo"/>
+          <img src="/google.png" alt="google logo" />
+          <img className="shadow" src="/google.png" alt="google logo" />
         </div>
         <div className="searchContainer">
           <form onSubmit={search} className="search" ref={searchBox}>
-            <SearchIcon className="searchIcon"/>
-            <input type="text" placeholder="Type your query..." ref={searchInput}
-                   onFocus={() => searchBox.current.classList.add('focus')}
-                   onBlur={() => searchBox.current.classList.remove('focus')}/>
+            <SearchIcon className="searchIcon" />
+            <input
+              type="text"
+              placeholder="Type your query..."
+              ref={searchInput}
+              onFocus={() => searchBox.current.classList.add('focus')}
+              onBlur={() => searchBox.current.classList.remove('focus')}
+            />
             <button type="submit">
               <span>Search</span>
-              <SearchIcon className="searchIcon"/>
+              <SearchIcon className="searchIcon" />
             </button>
           </form>
           <button className="lucky">
-            <SparklesIcon/>
+            <SparklesIcon />
             Feeling Lucky?
           </button>
         </div>

@@ -1,4 +1,3 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
 import {
   AdjustmentsIcon,
   ChatAltIcon,
@@ -11,6 +10,7 @@ import {
   UserGroupIcon,
   XIcon
 } from '@heroicons/react/outline';
+import React, { forwardRef, useEffect, useRef } from 'react';
 
 const Sidebar = forwardRef((props, ref) => {
   const sidebarList = useRef(null);
@@ -37,38 +37,38 @@ const Sidebar = forwardRef((props, ref) => {
     <div className="sidebar" ref={ref}>
       <ul ref={sidebarList}>
         <li className="ilogo">
-          <img src="/google.png" alt="google logo"/>
+          <img src="/google.png" alt="google logo" />
           <button className="icon closeSidebar" onClick={closeSidebar}>
-            <XIcon/>
+            <XIcon />
           </button>
         </li>
         <li>
-          <HomeIcon/> Home
+          <HomeIcon /> Home
         </li>
         <li>
-          <ClockIcon/> Search History
+          <ClockIcon /> Search History
         </li>
         <li>
-          <CollectionIcon/> Collections
+          <CollectionIcon /> Collections
         </li>
         <li>
-          <StatusOfflineIcon/> Offline Searches
+          <StatusOfflineIcon /> Offline Searches
         </li>
-        <hr/>
+        <hr />
         <li>
-          <AdjustmentsIcon/> Settings
-        </li>
-        <li>
-          <UserGroupIcon/> Data & Privacy
+          <AdjustmentsIcon /> Settings
         </li>
         <li>
-          <EyeOffIcon/> Hide Explicit Results
+          <UserGroupIcon /> Data & Privacy
         </li>
         <li>
-          <InformationCircleIcon/> Help & Support
+          <EyeOffIcon /> Hide Explicit Results
         </li>
         <li>
-          <ChatAltIcon/> Send Feedback
+          <InformationCircleIcon /> Help & Support
+        </li>
+        <li>
+          <ChatAltIcon /> Send Feedback
         </li>
       </ul>
     </div>

@@ -1,10 +1,3 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import Apps from '../components/Apps';
-import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
-import styles from '../styles/Search.module.css';
 import {
   ArrowLeftIcon,
   ArrowRightIcon,
@@ -19,7 +12,14 @@ import {
   UserCircleIcon,
   VideoCameraIcon
 } from '@heroicons/react/outline';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React, { useEffect, useRef, useState } from 'react';
 import TextTruncate from 'react-text-truncate';
+import Apps from '../components/Apps';
+import Footer from '../components/Footer';
+import Sidebar from '../components/Sidebar';
+import styles from '../styles/Search.module.css';
 
 const Search = ({ results }) => {
   const router = useRouter();
@@ -77,31 +77,40 @@ const Search = ({ results }) => {
     <div className="app" ref={appDiv}>
       <Head>
         <title>{router.query.q} - Google Search</title>
-        <link rel="icon"
-              href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/160px-Google_%22G%22_Logo.svg.png"/>
+        <link
+          rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/160px-Google_%22G%22_Logo.svg.png"
+        />
       </Head>
 
       <header ref={headerRef} className={styles.searchHeader}>
-        <Sidebar ref={sidebarRef}/>
+        <Sidebar ref={sidebarRef} />
         <span className={styles.headerSearch}>
           <button className="sidebarToggle icon" onClick={openSidebar}>
-            <MenuAlt1Icon/>
+            <MenuAlt1Icon />
           </button>
-          <img onClick={() => router.push('/')} className={styles.searchLogo} src="/google.png" alt="google logo"/>
+          <img
+            onClick={() => router.push('/')}
+            className={styles.searchLogo}
+            src="/google.png"
+            alt="google logo"
+          />
           <form onSubmit={search} className={`search ${styles.search} ${styles.desktop}`}>
-            <input type="search" value={userInp} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setUserInp(e.target.value);
-            }}/>
+            <input
+              type="search"
+              value={userInp}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserInp(e.target.value)}
+            />
           </form>
         </span>
         <span>
           <div className="themeToggle icon" ref={toggleSwitch} onClick={toggleTheme}>
-            <SunIcon className="sun"/>
-            <MoonIcon className="moon"/>
+            <SunIcon className="sun" />
+            <MoonIcon className="moon" />
           </div>
-          <Apps/>
+          <Apps />
           <div className="user">
-            <UserCircleIcon/>
+            <UserCircleIcon />
             <span className="uid">
               <span className="top">My Account</span>
             </span>
@@ -111,29 +120,31 @@ const Search = ({ results }) => {
 
       <main className={styles.searchMain}>
         <form onSubmit={search} className={`search ${styles.search} ${styles.mobile}`}>
-          <input type="search" value={userInp} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setUserInp(e.target.value);
-          }}/>
+          <input
+            type="search"
+            value={userInp}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserInp(e.target.value)}
+          />
         </form>
 
         <ul className={styles.options}>
           <li className={`icon ${styles.icon} ${styles.active}`}>
-            <DocumentSearchIcon/> <span>All</span>
+            <DocumentSearchIcon /> <span>All</span>
           </li>
           <li className={`icon ${styles.icon}`}>
-            <PhotographIcon/> <span>Images</span>
+            <PhotographIcon /> <span>Images</span>
           </li>
           <li className={`icon ${styles.icon}`}>
-            <VideoCameraIcon/> <span>Videos</span>
+            <VideoCameraIcon /> <span>Videos</span>
           </li>
           <li className={`icon ${styles.icon}`}>
-            <NewspaperIcon/> <span>News</span>
+            <NewspaperIcon /> <span>News</span>
           </li>
           <li className={`icon ${styles.icon}`}>
-            <MapIcon/> <span>Maps</span>
+            <MapIcon /> <span>Maps</span>
           </li>
           <li className={`icon ${styles.icon}`}>
-            <CogIcon/> <span>Search Options</span>
+            <CogIcon /> <span>Search Options</span>
           </li>
         </ul>
 
@@ -148,7 +159,13 @@ const Search = ({ results }) => {
               <a href={result.link}>
                 <p className={styles.link}>{result.formattedUrl}</p>
                 <p className={styles.title}>{result.title}</p>
-                <TextTruncate element="p" line={3} truncateText="..." text={result.snippet} className={styles.extract}/>
+                <TextTruncate
+                  element="p"
+                  line={3}
+                  truncateText="..."
+                  text={result.snippet}
+                  className={styles.extract}
+                />
               </a>
             </li>
           ))}
@@ -157,15 +174,15 @@ const Search = ({ results }) => {
           <p>Page ({queryStartIndex / 10 + 1})</p>
           {queryStartIndex >= 10 && (
             <button className={`icon ${styles.icon}`} onClick={goPrev}>
-              <ArrowLeftIcon/>
+              <ArrowLeftIcon />
             </button>
           )}
           <button className={`icon ${styles.icon}`} onClick={goNext}>
-            <ArrowRightIcon/>
+            <ArrowRightIcon />
           </button>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
