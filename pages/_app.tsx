@@ -3,8 +3,11 @@ import React from 'react';
 import '../styles/Header.css';
 import '../styles/Main.css';
 import '../styles/Sidebar.css';
+import '../styles/Apps.css';
+import '../styles/Footer.css';
 import '../styles/globals.css';
 
+import 'nprogress/nprogress.css';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 

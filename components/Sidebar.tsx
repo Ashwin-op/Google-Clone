@@ -15,6 +15,7 @@ import {
 const Sidebar = forwardRef((props, ref) => {
   const sidebarList = useRef(null);
 
+  // @ts-ignore
   const closeSidebar = () => ref.current.classList.remove('open');
 
   useEffect(() => {
@@ -24,6 +25,7 @@ const Sidebar = forwardRef((props, ref) => {
       if (sidebarList.current.contains(e.target) || sidebarToggle.contains(e.target)) {
         return;
       }
+      // @ts-ignore
       ref.current.classList.remove('open');
     };
     window.addEventListener('click', hideSidebar);
@@ -31,6 +33,7 @@ const Sidebar = forwardRef((props, ref) => {
   }, []);
 
   return (
+    // @ts-ignore
     <div className="sidebar" ref={ref}>
       <ul ref={sidebarList}>
         <li className="ilogo">

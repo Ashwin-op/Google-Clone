@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { useRouter } from 'next/router';
 import { MenuAlt1Icon, MoonIcon, SearchIcon, SparklesIcon, SunIcon, UserCircleIcon } from '@heroicons/react/outline';
 import Sidebar from '../components/Sidebar';
+import Apps from '../components/Apps';
 
 export default function Home() {
   const router = useRouter();
@@ -59,7 +60,7 @@ export default function Home() {
             <SunIcon className="sun"/>
             <MoonIcon className="moon"/>
           </div>
-          {/*<Apps/>*/}
+          <Apps/>
           <div className="user">
             <UserCircleIcon/>
             <span className="uid">

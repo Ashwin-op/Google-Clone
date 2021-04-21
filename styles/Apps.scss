@@ -1,0 +1,133 @@
+.apps {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    border-bottom: solid 10px var(--white);
+    bottom: -1rem;
+    z-index: 10;
+    left: 50%;
+    transform: translateY(-1rem) translateX(-50%);
+    opacity: 0;
+    pointer-events: none !important;
+  }
+}
+
+.appsToggle {
+  cursor: pointer;
+}
+
+.appsToggle.open {
+  svg {
+    fill: currentColor;
+  }
+}
+
+.apps__list {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: -150%;
+  background: var(--white);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  width: 30vw;
+  min-width: 250px;
+  max-height: calc(100vh - 9rem);
+  z-index: 9;
+  overflow: auto;
+  transform: translateY(-1rem) translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+
+  a {
+    width: calc(100% / 3);
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+
+    span {
+      margin: 1rem 0 0;
+      color: var(--bk2);
+    }
+
+    img {
+      width: 3.5rem;
+      padding: 0.25rem;
+      border-radius: 0.5rem;
+    }
+
+    &:hover {
+      img {
+        padding: 0.5rem;
+        background: var(--gr2);
+        box-shadow: inset 0 0.25rem 0.25rem rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+.app.dark {
+  .apps__list {
+    color: var(--bk2);
+
+    a {
+      &:hover {
+        img {
+          background: var(--gr3);
+        }
+      }
+    }
+  }
+}
+
+.apps.open {
+  .apps__list {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &::before {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .apps__list {
+    left: auto;
+    right: -0.5rem;
+    padding: 0.5rem;
+    max-height: calc(100vh - 9rem);
+    transform: translateY(-1rem);
+    padding: 0.75rem;
+
+    a {
+      img {
+        width: 2.75rem;
+      }
+
+      span {
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+      }
+
+      padding: 0.75rem;
+    }
+  }
+  .apps.open {
+    .apps__list {
+      transform: translateY(0);
+    }
+  }
+}

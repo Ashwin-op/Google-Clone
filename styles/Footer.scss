@@ -1,0 +1,50 @@
+footer {
+  display: flex;
+  padding: 1rem 1.5rem;
+  background: var(--gr2);
+  color: var(--bk3);
+  align-items: center;
+  font-size: 0.85rem;
+  justify-content: space-between;
+  margin-top: auto;
+
+  > span {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    width: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  a {
+    display: block;
+    margin-left: 0.75rem;
+  }
+}
+
+.fright {
+  a {
+    color: var(--bk3);
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 550px) {
+  footer {
+    flex-direction: column;
+
+    span {
+      &:not(.fright) {
+        > a {
+          display: none;
+        }
+      }
+    }
+
+    .fright {
+      margin-top: 1rem;
+    }
+  }
+}

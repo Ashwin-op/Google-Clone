@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "Footer.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;;;AAKF;EACE;EACA;;;AAIJ;EACE;IACE;;EAII;IACE;;EAKN;IACE",
+  "file": "Footer.css"
+}
