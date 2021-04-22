@@ -1,11 +1,4 @@
-import {
-  MenuAlt1Icon,
-  MoonIcon,
-  SearchIcon,
-  SparklesIcon,
-  SunIcon,
-  UserCircleIcon
-} from '@heroicons/react/outline';
+import { MenuAlt1Icon, MoonIcon, SearchIcon, SparklesIcon, SunIcon, UserCircleIcon } from '@heroicons/react/outline';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useRef } from 'react';
@@ -44,7 +37,7 @@ export default function Home() {
   return (
     <div className="app" ref={appDiv}>
       <Head>
-        <title>Google-ish</title>
+        <title>Google-Clone</title>
         <link
           rel="icon"
           href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/160px-Google_%22G%22_Logo.svg.png"
