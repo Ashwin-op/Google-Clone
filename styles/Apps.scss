@@ -107,7 +107,6 @@
   .apps__list {
     left: auto;
     right: -0.5rem;
-    padding: 0.5rem;
     max-height: calc(100vh - 9rem);
     transform: translateY(-1rem);
     padding: 0.75rem;
@@ -125,6 +124,7 @@
       padding: 0.75rem;
     }
   }
+
   .apps.open {
     .apps__list {
       transform: translateY(0);

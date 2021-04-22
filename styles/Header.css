@@ -5,34 +5,28 @@ header {
     justify-content: space-between;
     color: var(--bk3);
 }
-
 header svg {
     width: 1.5rem;
     color: var(--bk3);
 }
-
 header > span {
     display: flex;
     align-items: center;
 }
-
 header .nav {
     list-style-type: none;
     display: flex;
     margin-left: 3rem;
 }
-
 header .nav li {
     position: relative;
     overflow: hidden;
     padding: 0.5rem 0;
     color: var(--bk3);
 }
-
 header .nav li + li {
     margin-left: 2rem;
 }
-
 header .nav li::before {
     position: absolute;
     content: "";
@@ -44,11 +38,9 @@ header .nav li::before {
     background: var(--bk2);
     bottom: 0;
 }
-
 header .nav li:hover {
     color: var(--bk2);
 }
-
 header .nav li:hover::before {
     transform: scaleX(1);
     transform-origin: right center;
@@ -60,7 +52,6 @@ header .nav li:hover::before {
     place-items: center;
     z-index: 1;
 }
-
 .icon::before {
     position: absolute;
     content: "";
@@ -73,15 +64,12 @@ header .nav li:hover::before {
     opacity: 0;
     transform: scale(0);
 }
-
 .icon svg {
     color: var(--bk3);
 }
-
 .icon:hover svg {
     color: var(--bk2);
 }
-
 .icon:hover::before {
     opacity: 1;
     transform: scale(1);
@@ -106,9 +94,8 @@ button.icon {
     height: 2rem;
     margin-right: 1.25rem;
     position: relative;
-    pointer: cursor;
+    cursor: pointer;
 }
-
 .themeToggle::after {
     position: absolute;
     content: "Switch Theme";
@@ -123,22 +110,18 @@ button.icon {
     transform: translateX(0.5rem);
     pointer-events: none;
 }
-
 .themeToggle:hover::after {
     opacity: 1;
     transform: translateX(0);
 }
-
 .themeToggle svg {
     position: absolute;
 }
-
 .themeToggle .moon {
     transform: translateY(0);
     opacity: 1;
     transition: all 0.2s 0.2s ease-in-out;
 }
-
 .themeToggle .sun {
     opacity: 0;
     transform: translateY(-1.33rem);
@@ -150,7 +133,6 @@ button.icon {
     opacity: 0;
     transition: all 0.2s -0.1s ease-in-out;
 }
-
 .themeToggle.dark .sun {
     opacity: 1;
     transform: translateY(0);
@@ -166,27 +148,21 @@ button.icon {
     padding: 0.25rem 1rem 0.25rem 0.25rem;
     margin-left: 1.5rem;
 }
-
 .user .top {
     color: var(--bk3);
 }
-
 .user:hover {
     background: linear-gradient(to right bottom, var(--bk3), var(--bk1));
 }
-
 .user:hover .top {
     color: var(--white);
 }
-
 .user:hover svg {
     color: var(--white);
 }
-
 .user svg {
     color: var(--bk3);
 }
-
 .user > .uid {
     display: flex;
     flex-direction: column;
@@ -196,11 +172,9 @@ button.icon {
 .app.dark .user .top {
     color: var(--bk2);
 }
-
 .app.dark .user:hover {
     background: var(--bk1);
 }
-
 .app.dark .user:hover .top {
     color: var(--white);
 }

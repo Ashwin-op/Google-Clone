@@ -158,7 +158,6 @@
 
 .time {
   font-size: 0.85rem;
-  color: var(--gr4);
   padding: 1rem 1rem 2rem 1rem;
   width: 100%;
   transition: all 0.2s;
@@ -213,16 +212,20 @@
 
     padding: 1rem;
   }
+
   .search.mobile {
     display: flex;
   }
+
   .search.desktop {
     display: none;
   }
+
   .time {
     padding: 1rem 1rem 1.25rem;
     border-radius: 1rem;
   }
+
   .results {
     li {
       margin-bottom: 0.75rem;

@@ -1,212 +1,193 @@
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
 .logo {
-    position: relative;
-    width: 90%;
-    max-width: 300px;
-    margin-bottom: 3rem;
-    z-index: 1;
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  margin-bottom: 3rem;
+  z-index: 1;
 }
-
 .logo img {
-    width: 100%;
+  width: 100%;
 }
-
 .logo img.shadow {
-    left: 0;
-    top: 5px;
-    position: absolute;
-    filter: blur(0.5rem);
-    opacity: 0.25;
-    z-index: -1;
+  left: 0;
+  top: 5px;
+  position: absolute;
+  filter: blur(0.5rem);
+  opacity: 0.25;
+  z-index: -1;
 }
 
 .app.dark .logo img {
-    filter: brightness(95%);
+  filter: brightness(95%);
 }
-
 .app.dark .logo img.shadow {
-    filter: blur(0.5rem) brightness(50%);
+  filter: blur(0.5rem) brightness(50%);
 }
-
 .app.dark .search:hover {
-    box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.15);
 }
-
 .app.dark .search button {
-    color: white;
+  color: white;
 }
-
 .app.dark .search button:hover {
-    box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.15);
+  box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.15);
 }
-
 .app.dark .search button:focus {
-    box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5), 0 0.25rem 0.75rem rgba(62, 202, 255, 0.25);
+  box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5), 0 0.25rem 0.75rem rgba(62, 202, 255, 0.25);
 }
-
 .app.dark .search.focus {
-    box-shadow: 0 0 0 0.15rem rgba(135, 105, 185, 0.5), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 0.15rem rgba(135, 105, 185, 0.5), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
 }
 
 .searchContainer {
-    width: calc(100% - 3rem);
-    max-width: 600px;
-    position: relative;
+  width: calc(100% - 3rem);
+  max-width: 600px;
+  position: relative;
 }
 
 .search {
-    display: flex;
-    align-items: center;
-    border-radius: 99px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-    width: 100%;
-    background: var(--white);
-    position: relative;
-    z-index: 6;
+  display: flex;
+  align-items: center;
+  border-radius: 99px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  width: 100%;
+  background: var(--white);
+  position: relative;
+  z-index: 6;
 }
-
 .search input {
-    font-size: 1.15rem;
-    border: 0;
-    background: none;
-    font-family: "Product Sans", sans-serif;
-    color: var(--bk1);
-    flex: 1;
-    padding: 0.75rem 1.5rem 0.75rem 3.5rem;
-    border-radius: 99px 0 0 99px;
+  font-size: 1.15rem;
+  border: 0;
+  background: none;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--bk1);
+  flex: 1;
+  padding: 0.75rem 1.5rem 0.75rem 3.5rem;
+  border-radius: 99px 0 0 99px;
 }
-
 .search input::placeholder {
-    color: var(--gr1);
+  color: var(--gr1);
 }
-
 .search button {
-    font-size: 1.15rem;
-    border: 0;
-    background: none;
-    font-family: "Product Sans", sans-serif;
-    color: var(--bk1);
-    padding: 0.75rem 1.5rem;
-    background: linear-gradient(to right bottom, var(--b1), var(--b2));
-    color: var(--white);
-    font-weight: 500;
-    border-radius: 0 99px 99px 0;
-    user-select: none;
+  font-size: 1.15rem;
+  font-family: "Titillium Web", sans-serif;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right bottom, var(--b1), var(--b2));
+  color: var(--white);
+  font-weight: 500;
+  border-radius: 0 99px 99px 0;
+  user-select: none;
+  cursor: pointer;
 }
-
 .search button svg {
-    display: none;
+  display: none;
 }
-
 .search button:hover {
-    box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.25);
+  box-shadow: 0 0.75rem 1rem rgba(62, 202, 255, 0.25);
 }
-
 .search button:focus {
-    box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5), 0 0.25rem 0.75rem rgba(62, 202, 255, 0.5);
+  box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5), 0 0.25rem 0.75rem rgba(62, 202, 255, 0.5);
 }
-
 .search:hover {
-    box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.75rem 1rem rgba(0, 0, 0, 0.08);
 }
-
 .search > svg {
-    width: 1.5rem;
-    position: absolute;
-    color: var(--gr1);
+  width: 1.5rem;
+  position: absolute;
+  color: var(--gr1);
 }
 
 .lucky {
-    display: flex;
-    padding: 0.75rem 1.5rem;
-    background: transparent;
-    border: none;
-    color: var(--bk3);
-    opacity: 0.85;
-    font-weight: 500;
-    border-radius: 99px;
-    user-select: none;
-    margin: 1.5rem auto;
-    font-size: 0.95rem;
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--bk3);
+  opacity: 0.85;
+  font-weight: 500;
+  border-radius: 99px;
+  user-select: none;
+  margin: 1.5rem auto;
+  font-size: 0.95rem;
 }
-
 .lucky:hover {
-    background: var(--gr2);
-    opacity: 1;
+  background: var(--gr2);
+  opacity: 1;
 }
-
 .lucky svg {
-    width: 1.25rem;
-    margin-right: 0.5rem;
-    color: var(--y2);
+  width: 1.25rem;
+  margin-right: 0.5rem;
+  color: var(--y2);
 }
 
 .search.focus {
-    box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.1), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.1), 0 0.75rem 1.5rem rgba(0, 0, 0, 0.05);
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 .searchIcon {
-    left: 1rem;
+  left: 1rem;
 }
 
 @media (max-width: 550px) {
-    ul.nav {
-        display: none;
-    }
+  ul.nav {
+    display: none;
+  }
 
-    .user {
-        display: none;
-    }
+  .user {
+    display: none;
+  }
 
-    .logo {
-        width: 60%;
-        margin-bottom: 1.5rem;
-    }
+  .logo {
+    width: 60%;
+    margin-bottom: 1.5rem;
+  }
 
-    .search > svg {
-        display: none;
-    }
+  .search > svg {
+    display: none;
+  }
 
-    .search input {
-        padding: 0.75rem 0.75rem 0.75rem 1.25rem;
-        width: 100%;
-        font-size: 1rem;
-    }
+  .search input {
+    padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+    width: 100%;
+    font-size: 1rem;
+  }
 
-    .search button {
-        display: flex;
-        align-items: center;
-        padding: 0.9rem 1rem;
-    }
+  .search button {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1rem;
+  }
 
-    .search button span {
-        display: none;
-    }
+  .search button span {
+    display: none;
+  }
 
-    .search button svg {
-        width: 1rem;
-        display: block;
-    }
+  .search button svg {
+    width: 1rem;
+    display: block;
+  }
 
-    .lucky {
-        margin-top: 1.5rem;
-        font-size: 0.9rem;
-    }
+  .lucky {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=Main.css.map */

@@ -52,7 +52,7 @@ main {
 
       &:focus {
         box-shadow: 0 0 0 0.15rem rgba(62, 202, 255, 0.5),
-          0 0.25rem 0.75rem rgba(62, 202, 255, 0.25);
+        0 0.25rem 0.75rem rgba(62, 202, 255, 0.25);
       }
     }
   }
@@ -82,7 +82,7 @@ main {
     font-size: 1.15rem;
     border: 0;
     background: none;
-    font-family: 'Product Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     color: var(--bk1);
     flex: 1;
     padding: 0.75rem 1.5rem 0.75rem 3.5rem;
@@ -95,16 +95,15 @@ main {
 
   button {
     font-size: 1.15rem;
+    font-family: 'Titillium Web', sans-serif;
     border: 0;
-    background: none;
-    font-family: 'Product Sans', sans-serif;
-    color: var(--bk1);
     padding: 0.75rem 1.5rem;
     background: linear-gradient(to right bottom, var(--b1), var(--b2));
     color: var(--white);
     font-weight: 500;
     border-radius: 0 99px 99px 0;
     user-select: none;
+    cursor: pointer;
 
     svg {
       display: none;
